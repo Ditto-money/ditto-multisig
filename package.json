@@ -1,0 +1,32 @@
+{
+  "name": "ditto-multisig",
+  "version": "0.0.1",
+  "description": "Ditto multisig contract",
+  "keywords": [
+    "Binance Smart Chain",
+    "Wallet",
+    "Safe",
+    "MultiSig"
+  ],
+  "scripts": {
+      "build": "hardhat compile",
+      "test": "hardhat test",
+      "coverage": "hardhat coverage",
+      "deploy-all": "hardhat deploy-contracts --network",
+      "deploy": "hardhat deploy --network",
+      "lint": "yarn lint:sol && yarn lint:ts",
+      "lint:sol": "solhint 'contracts/**/*.sol'",
+      "lint:ts": "eslint --max-warnings 0 .",
+      "fmt:sol": "prettier 'contracts/**/*.sol' -w",
+      "prepack": "yarn build"
+  },
+  "author": "codingsh@pm.me",
+  "devDependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.1",
+    "@nomiclabs/hardhat-waffle": "^2.0.1",
+    "chai": "^4.3.0",
+    "ethereum-waffle": "^3.2.2",
+    "ethers": "^5.0.31",
+    "hardhat": "^2.0.11"
+  }
+}
